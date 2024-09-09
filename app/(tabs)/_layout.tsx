@@ -8,6 +8,7 @@ import { useColorScheme } from "@/components/useColorScheme";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 
 // Import Active Icon Components
+// import {LuLayoutGrid} from "react-icons/lu";
 import HomeActive from "../../assets/icons/home_active.svg";
 import ExploreActive from "../../assets/icons/explore_active.svg";
 import FavActive from "../../assets/icons/fav_active.svg";
@@ -56,10 +57,7 @@ function TabBarIcon({
         );
       case "menu":
         return (
-          <FavActive
-            width={actuatedNormalize(26)}
-            height={actuatedNormalize(26)}
-          />
+          <FavActive />
         );
       case "profile":
         return (
@@ -86,7 +84,7 @@ function TabBarIcon({
         );
       case "menu":
         return (
-          <Fav width={actuatedNormalize(26)} height={actuatedNormalize(26)} />
+          <FavActive />
         );
       case "profile":
         return (
