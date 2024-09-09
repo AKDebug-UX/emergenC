@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
 
   title: {
     fontFamily: "SandBold",
-    fontSize: actuatedNormalize(24),
+    // fontSize: actuatedNormalize(44),
     fontWeight: "600",
   },
   desc: {

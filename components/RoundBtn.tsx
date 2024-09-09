@@ -28,11 +28,11 @@ const RoundBtn = ({ press }: { press?: any }) => {
       activeOpacity={0.5}
       //   style={styles.btn}
       onPress={() => router.push("/home")}
-      className='w-[64px] h-[64px] border-2 bg-transparent border-[#A01CFE] flex items-center justify-center  rounded-full'
+      className='w-[74px] h-[74px] border-2 bg-transparent border-white flex items-center justify-center  rounded-full'
     >
       <Animated.View
         style={animatedStyles}
-        className='w-[56px] h-[56px] animate-pulse flex items-center justify-center bg-[#A01CFE] rounded-full'
+        className='w-[66px] h-[66px] animate-pulse flex items-center justify-center bg-primary_1 rounded-full'
       >
         {/* <Text> &rarr;</Text> */}
         <Image source={require("../assets/icons/arrow.png")} />

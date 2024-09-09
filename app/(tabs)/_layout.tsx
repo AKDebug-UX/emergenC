@@ -47,14 +47,14 @@ function TabBarIcon({
             height={actuatedNormalize(26)}
           />
         );
-      case "explore":
+      case "contact":
         return (
           <ExploreActive
             width={actuatedNormalize(26)}
             height={actuatedNormalize(26)}
           />
         );
-      case "favourites":
+      case "menu":
         return (
           <FavActive
             width={actuatedNormalize(26)}
@@ -77,14 +77,14 @@ function TabBarIcon({
         return (
           <Home width={actuatedNormalize(26)} height={actuatedNormalize(26)} />
         );
-      case "explore":
+      case "contact":
         return (
           <Explore
             width={actuatedNormalize(26)}
             height={actuatedNormalize(26)}
           />
         );
-      case "favourites":
+      case "menu":
         return (
           <Fav width={actuatedNormalize(26)} height={actuatedNormalize(26)} />
         );
@@ -148,21 +148,21 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name='explore'
+          name='contact'
           options={{
-            title: "Explore",
+            title: "Contacts",
             tabBarIcon: ({ color, focused }) => (
-              <TabBarIcon name='explore' color={color} isActive={focused} />
+              <TabBarIcon name='contact' color={color} isActive={focused} />
             ),
             tabBarLabel: ({ focused }) => (
-              <GradientText focused={focused} name='Explore' />
+              <GradientText focused={focused} name='Contacts' />
             ),
           }}
         />
         <Tabs.Screen
-          name='create'
+          name='menu'
           options={{
-            title: "Create",
+            title: "Menu",
             tabBarStyle: { display: "none" },
             tabBarIconStyle: {
               position: "absolute",
@@ -209,7 +209,7 @@ export default function TabLayout() {
         backgroundColor={useThemeColor("text")}
         animated
         style={"inverted"}
-        // style={Platform.OS === "ios" ? "light" : "auto"}
+      // style={Platform.OS === "ios" ? "light" : "auto"}
       />
     </>
   );
