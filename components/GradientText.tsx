@@ -39,8 +39,8 @@ const GradientText = ({
     >
       <LinearGradient
         colors={[
-          focused ? "#81F495" : "#EFF4C3",
-          focused ? "#81F495" : "#EFF4C3",
+          focused ? "#D34949" : "#fff",
+          focused ? "#D34949" : "#fff",
         ]}
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 1 }}
