@@ -106,14 +106,14 @@ export default function TabLayout() {
     <>
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: "#a01cfe",
+          tabBarActiveTintColor: "#D34949",
           headerShown: useClientOnlyValue(false, !true),
           tabBarStyle: {
             backgroundColor: "#112022",
             height: actuatedNormalizeVertical(65),
             marginHorizontal: actuatedNormalizeVertical(-10),
             borderTopWidth: 0.5,
-            borderTopColor: "#EFF4C3",
+            borderTopColor: "#D34949",
           },
           tabBarIconStyle: { marginTop: actuatedNormalizeVertical(10) },
           tabBarLabelStyle: { marginBottom: actuatedNormalizeVertical(10) },

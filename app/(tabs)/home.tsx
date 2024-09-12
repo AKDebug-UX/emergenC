@@ -20,16 +20,6 @@ const Main = () => {
       backgroundColor: bg,
       gap: 50,
     },
-    emergencyButton: {
-      backgroundColor: 'red',
-      borderRadius: 100, // Makes the button circular
-      width: 200,
-      height: 200,
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignSelf: 'center',
-      marginVertical: 30,
-    },
     buttonIcon: {
       fontSize: 50,
       color: 'white',
@@ -44,58 +34,58 @@ const Main = () => {
       borderWidth: 1,
     },
     cancelButtonText: {
-      color: 'red',
+      color: '#D34949',
       fontSize: 18,
       fontWeight: 'bold',
     },
     header: {
       fontSize: 30,
-      color: "white",
       fontWeight: 'bold',
       textAlign: 'center',
-      marginTop: 20,
+      marginTop: 70,
     },
     subHeader: {
       fontSize: 20,
-      color: "white",
       textAlign: 'center',
-      marginTop: 30,
+      marginTop: 20,
     }
   });
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView className="flex-1">
-        <ScrollView style={styles.container}>
-          {/* Header section */}
-          <View className="flex flex-row bg-white px-6 py-4 justify-between items-center">
-            <View>
-              <Text className="text-[20px]">Welcome back,</Text>
-              <Text className="text-[30px] font-bold">Akorede</Text>
-            </View>
-            <Image source={require("../../assets/images/profile.png")} />
+    <SafeAreaView>
+      <View className="flex flex-col w-full items-center justify-center">
+        {/* Header section */}
+        <View className="flex flex-row w-full bg-white px-6 py-4 justify-between items-center">
+          <View>
+            <Text className="text-[20px]">Welcome back,</Text>
+            <Text className="text-[30px] font-bold">Akorede</Text>
           </View>
+          <Image source={require("../../assets/images/profile.png")} />
+        </View>
 
-          {/* Emergency message section */}
-          <View className="text-white">
-            <Text style={styles.header}>Having an Emergency?</Text>
-            <Text style={styles.subHeader}>
-              Press the button below, help will arrive soon.
-            </Text>
+        {/* Emergency message section */}
+        <View className="">
+          <Text style={styles.header}>Having an Emergency?</Text>
+          <Text style={styles.subHeader}>
+            Press the button below, help will arrive soon.
+          </Text>
+        </View>
+
+        {/* Emergency button */}
+        <View className="bg-[#D34949]/30 p-[7%] my-[20%] justify-center items-center rounded-full">
+          <View className="bg-[#D34949]/20 p-[7%] justify-center items-center rounded-full">
+            <TouchableOpacity onPress={handlePress} className="bg-[#D34949] w-[230px] h-[230px] justify-center items-center rounded-full">
+              <Text style={styles.buttonIcon}>🚨</Text>
+            </TouchableOpacity>
           </View>
+        </View>
 
-          {/* Emergency button */}
-          <TouchableOpacity onPress={handlePress} style={styles.emergencyButton}>
-            <Text style={styles.buttonIcon}>🚨</Text>
-          </TouchableOpacity>
-
-          {/* Cancel button */}
-          <TouchableOpacity onPress={handleCancel} style={styles.cancelButton}>
-            <Text style={styles.cancelButtonText}>CANCEL</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </SafeAreaView>
-    </SafeAreaProvider>
+        {/* Cancel button */}
+        <TouchableOpacity onPress={handleCancel} className="bg-white px-14 h-[50px] justify-center items-center rounded-md shadow-lg">
+          <Text style={styles.cancelButtonText}>CANCEL</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
